@@ -1,0 +1,179 @@
+<DOCTYPE HTML>
+    <html lang="en">
+
+    <head>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <meta charset='utf-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Account</title>
+        <link rel='stylesheet' href='../../css/csssetup.css' />
+        <link rel='stylesheet' href='../../css/cssforms.css'/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar"> <!--This is the Top Navigation bar section-->
+            <div class="navdiv">
+                <a href="../../../index.html">
+                    <img src="../../images/RockstarRedmini.png" width="100" />
+                </a>
+                    <div class="list">
+                        <ul>
+                            <li><a href="Account/Account.html">Account page</a></li>
+                            <li><a href="../support.html">Support page</a></li>
+                            <li><a href="../news.html">News and Events</a></li>
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="../products.html">Products from us</a></li>
+                         </ul>
+                </div>
+            </div>
+        </nav> <!--End of top nav bar section-->
+        <div class="account">
+            <h1> you can register your account here</h1>
+            
+        </div>
+    
+    </body>
+
+    <body>
+       <!-- Loading Screen (from news.html) -->
+       <div id="loader" class="Noll-News" style="position: fixed; width: 100%; height: 100%; background: white; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="index/images/loader.gif" width="3000" alt="Loading..." />
+        <h1>Loading Website...</h1>
+        <p>Please wait while the page loads.</p>
+    </div>
+
+    
+        <style>
+            .form-label, .form-check-label, h3, p {
+              font-size: 1.5rem;
+            }
+          
+            .form-control, .form-check-input, .btn {
+              font-size: 1.3rem;
+              padding: 1rem;
+            }
+          
+            .form-control-lg {
+              padding: 1.2rem;
+              font-size: 1.4rem;
+            }
+          
+            .valid-feedback, .invalid-feedback {
+              font-size: 1.2rem;
+            }
+          </style>
+        <div class="container mt-3">
+            <h3>Form Validation</h3>
+            <p>Try to submit the form.</p>
+              <!--User Name-->
+            <form action="../../../index.html" class="was-validated">
+              <div class="mb-3 mt-3">
+                <label for="uname" class="form-label">Username:</label>
+                <input type="text" class="form-control" id="uname" placeholder="Enter your Username" name="uname" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill in your user name.</div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="uname" class="form-label">First name:</label>
+                <input type="text" class="form-control" id="uname" placeholder="Enter your First Name" name="fname" required>
+                <label for="uname" class="form-label">Last name:</label>
+                <input type="text" class="form-control" id="uname" placeholder="Enter your Last Name" name="lname" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please Enter your first and last name.</div>
+              </div>
+              
+              <!--Email-->
+              <div class="mb-3 mt-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="uname" placeholder="Enter your Email" name="uname" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill in your email.</div>
+              </div>
+              <!-- Password -->
+              <div class="mb-4">
+                <label for="new-password" class="form-label fs-5">Enter Password:</label>
+                <input type="password" class="form-control form-control-lg" id="enter-password" placeholder="Enter password" name="newpswd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill in your password.</div>
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="mb-4">
+                <label for="confirm-password" class="form-label fs-5">Confirm Password:</label>
+                <input type="password" class="form-control form-control-lg" id="confirm-password" placeholder="Confirm password" name="confirmpwd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback" id="matchError">Please fill in your password.</div>
+              </div>
+
+              <!--Gender select-->
+              <div class="mb-3">
+                <label for="gender" class="form-label">Gender:</label>
+                <select id="gender" name="gender" class="form-control" required>
+                  <option value="" disabled selected>Select your gender</option>
+                  <option value="M">Male</option>
+                  <option value="F">Female</option>
+                  <option value="O">Other</option>
+                  <option value="U">Unknown</option>
+                </select>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please select your gender.</div>
+              </div>
+              
+                  <!-- Checkbox -->
+                  <div class="form-check mb-4 fs-5">
+                    <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+                    <label class="form-check-label" for="myCheck">are you a robot.</label>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                  </div>
+              
+                  <!-- Submit Button -->
+                  <button type="submit" class="btn btn-secondary btn-lg">Submit</button>
+                </form>
+              </div>
+              
+              <script>
+                function validatePasswords() {
+                  const pw1 = document.getElementById('password');
+                  const pw2 = document.getElementById('confirm-password');
+                  const matchError = document.getElementById('matchError');
+              
+                  if (pw1.value !== pw2.value) {
+                    pw2.setCustomValidity("Passwords do not match");
+                    matchError.textContent = "Passwords must match.";
+                    return false;
+                  } else {
+                    pw2.setCustomValidity("");
+                    return true;
+                  }
+                }
+              </script>
+        </nav>
+        </nav>            
+            
+        <div class="lower-bar">
+            <p>Follow our socials</p>
+            <p>You can find us on the</p>
+            <ol>
+                <li><img src="../../images/Twitter.png" width="60"/><a href="#"></a><a href="https://x.com/RockstarGames/" style=color:cyan; text-decoration: line-through;>Twitter / X</a></li>
+                <li><img src="../../images/Instagram.png" width="50"/><a href="#"></a><a href="https://www.instagram.com/rockstargames/" style=color:pink; text-decoration: line-through;>Instagram</a></li>
+                <li><img src="../../images/YouTube.png" width="50"/><a href="#"></a><a href="https://www.youtube.com/user/RockstarGames" style=color:red; text-decoration: line-through;>YouTube</a></li>
+            </ul>
+            <p>Copyright © #### RockstarRed.com - All rights reserved</p>
+
+
+            <script>
+              window.addEventListener('load', function () {
+                const loader = document.getElementById('loader');
+                if (loader) {
+                  loader.style.display = 'none';
+                }
+              });
+            </script>
+        </div>
+    </body>
+</html>

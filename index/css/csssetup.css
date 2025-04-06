@@ -1,0 +1,120 @@
+*{
+    text-decoration: none;
+
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    padding: 0;
+    zoom: 80%;
+    
+}
+.navdiv{/*Cnahges the background color within the effected "nav class" "navbar" statement. all within the navigation bar is also within the "div" opening and closing statement*/
+    background-color: #000000; 
+    padding: 10px; 
+    padding-left:55px;
+    
+}
+.navdiv{ /*Alligns all items to the center of the line vertically with "allign-items: center" and causes a space between the list and logo with, "justify-content: space-between". */
+    display: flex;
+    align-items: center; 
+    justify-Content: space-between;
+    width: 100%;
+    height: 10%;
+    margin: 10px;
+    padding: 0;
+    zoom: 60%;
+
+}
+li{
+    list-style: none; 
+    display: inline-block;
+}
+.sitename a{
+    Color:#d41b07; 
+    font-size: 40px;
+}
+.list a{
+    Color:#edf8c6; 
+    font-size: 40px; 
+    margin-right: 100px;
+}
+.news-line{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.description{
+    margin:1%;
+}
+.intro{
+    margin:1%
+}
+.news-right{
+    text-align:right;
+    margin-right:40px;
+}
+.Pannel{
+    text-align:center;
+    margin-left:1500px;
+}
+.Title{
+    text-align:left;
+    margin-left:0%;
+}
+.Product-line{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+body{
+    Color:#f3f3ec; 
+    background-image: linear-gradient(to right, rgb(71, 0, 0), rgb(2, 0, 31), rgb(110, 27, 0));
+    font-family: helvetica;
+    line-height: 1.3;
+    align-items:center; 
+    font-size: 70px;
+}
+.Support{
+    text-align: Center;
+}
+.account{
+    color:white;
+    text-align: center;
+    
+
+}
+    
+
+p{
+    margin-bottom: 50px;
+    margin: 40px;
+}
+.main{
+    margin-top:140px; font-size:40px;  
+}
+.productshow{
+    text-align: center;
+    font-size: 35px;
+    
+    
+}
+.products{
+    display:flex;
+    Margin-right:30;
+    padding: 100px;
+}
+.lower-bar{
+    text-align: center;
+    font-size:40;
+    background-color:#000000;
+    color:aliceblue;
+    margin-right: 20px;
+}
+
+
+   
+    

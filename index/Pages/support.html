@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Support</title>
+  <link rel="stylesheet" href="../css/csssetup.css" />
+  <link rel="stylesheet" href="../css/cssforms.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navdiv">
+      <a href="../../index.html">
+        <img src="../images/RockstarRedmini.png" width="100" />
+      </a>
+      <div class="list">
+        <ul>
+          <li><a href="Account/Account.html">Account page</a></li>
+          <li><a href="support.html">Support page</a></li>
+          <li><a href="news.html">News and Events</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products from us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="Noll-News" style="position: fixed; width: 100%; height: 100%; background: white; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img src="index/images/loader.gif" width="300" alt="Loading..." />
+    <h1>Loading Website...</h1>
+    <p>Please wait while the page loads.</p>
+  </div>
+
+  <!-- Support Section -->
+  <div class="Support">
+    <h2>Support</h2>
+    <p>Welcome to our support page. Simply enter your email, your message to us, and click the button below.</p>
+  </div>
+
+  <!-- Formsubmit Form -->
+  <form action="https://formsubmit.co/rstarredinc1992@gmail.com" method="POST" class="speaker-form">
+    <!-- Email-->
+    <div class="form-row">
+      <label for="email">Your Email</label>
+      <input id="email" name="email" type="email" placeholder="joe@example.com" required />
+    </div>
+
+    <!-- Message-->
+    <div class="form-row">
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+    </div>
+
+    <!--Capcha field, hidden from end user-->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Send Button -->
+    <div class="form-row-button">
+      <button type="submit" class="btn btn-primary">Send Support Message</button>
+    </div>
+  </form>
+
+  <!-- Socials -->
+  <div class="lower-bar">
+    <p>Follow our socials</p>
+    <p>You can find us on the</p>
+    <ol>
+      <li>
+        <img src="../images/Twitter.png" width="60" />
+        <a href="https://x.com/RockstarGames/" style="color:cyan; text-decoration: line-through;">Twitter / X</a>
+      </li>
+      <li>
+        <img src="../images/Instagram.png" width="50" />
+        <a href="https://www.instagram.com/rockstargames/" style="color:pink; text-decoration: line-through;">Instagram</a>
+      </li>
+      <li>
+        <img src="../images/YouTube.png" width="50" />
+        <a href="https://www.youtube.com/user/RockstarGames" style="color:red; text-decoration: line-through;">YouTube</a>
+      </li>
+    </ol>
+  </div>
+
+  <script>
+    window.addEventListener('load', function () {
+      const loader = document.getElementById('loader');
+      if (loader) {
+        loader.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+
+</html>
